@@ -2,7 +2,7 @@
 name: Auto Sign
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '43 16 * * *'  # 北京时间 00:43（森空岛0点刷新后，错开整点避免GitHub排队延迟）
   workflow_dispatch:
 jobs:
   build:
