@@ -297,7 +297,8 @@ def read(path):
 
 def read_from_env():
     v = []
-    token_list = token_env.split(',')
+    # 支持逗号或换行分隔的多个token
+    token_list = token_env.replace('\r', ',').replace('\n', ',').split(',')
     for i in token_list:
         i = i.strip()
         if i and i not in v:
